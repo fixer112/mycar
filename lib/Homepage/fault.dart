@@ -101,6 +101,9 @@ class Fault extends StatelessWidget {
     'medium': Icons.notification_important,
     'high': Icons.error
   }; */
+  selectedRow(BuildContext context, msg) {
+    print(msg);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,36 +133,47 @@ class Fault extends StatelessWidget {
                     : null, */
                 children: [
                   TableCell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: msg.containsKey('error')
-                            ? Container(
-                                /* height:
-                                    msg.containsKey('height') ? msg['height'] : 50.00, */
-                                child: Icon(
-                                  Icons.error,
-                                  color: errorColors[msg['error']],
-                                  size: 20.00,
-                                ),
-                              )
-                            : Container(),
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedRow(context, msg);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(
+                          child: msg.containsKey('error')
+                              ? Container(
+                                  /* height:
+                                      msg.containsKey('height') ? msg['height'] : 50.00, */
+                                  child: Icon(
+                                    Icons.error,
+                                    color: errorColors[msg['error']],
+                                    size: 20.00,
+                                  ),
+                                )
+                              : Container(),
+                        ),
                       ),
                     ),
                   ),
                   TableCell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Container(
-                          height:
-                              msg.containsKey('height') ? msg['height'] : 50.00,
-                          child: Text(
-                            msg['first'],
-                            style: TextStyle(
-                              fontWeight: msg.containsKey('style')
-                                  ? msg['style']
-                                  : FontWeight.normal,
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedRow(context, msg);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(
+                          child: Container(
+                            height: msg.containsKey('height')
+                                ? msg['height']
+                                : 50.00,
+                            child: Text(
+                              msg['first'],
+                              style: TextStyle(
+                                fontWeight: msg.containsKey('style')
+                                    ? msg['style']
+                                    : FontWeight.normal,
+                              ),
                             ),
                           ),
                         ),
@@ -167,16 +181,21 @@ class Fault extends StatelessWidget {
                     ),
                   ),
                   TableCell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Container(
-                          child: Text(
-                            msg['second'],
-                            style: TextStyle(
-                              fontWeight: msg.containsKey('style')
-                                  ? msg['style']
-                                  : FontWeight.normal,
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedRow(context, msg);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(
+                          child: Container(
+                            child: Text(
+                              msg['second'],
+                              style: TextStyle(
+                                fontWeight: msg.containsKey('style')
+                                    ? msg['style']
+                                    : FontWeight.normal,
+                              ),
                             ),
                           ),
                         ),
@@ -184,16 +203,21 @@ class Fault extends StatelessWidget {
                     ),
                   ),
                   TableCell(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                        child: Container(
-                          child: Text(
-                            msg['third'],
-                            style: TextStyle(
-                              fontWeight: msg.containsKey('style')
-                                  ? msg['style']
-                                  : FontWeight.normal,
+                    child: GestureDetector(
+                      onTap: () {
+                        selectedRow(context, msg);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Center(
+                          child: Container(
+                            child: Text(
+                              msg['third'],
+                              style: TextStyle(
+                                fontWeight: msg.containsKey('style')
+                                    ? msg['style']
+                                    : FontWeight.normal,
+                              ),
                             ),
                           ),
                         ),

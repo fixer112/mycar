@@ -19,21 +19,29 @@ class _CarsState extends State<Cars> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      child: DropdownButton(
-        hint: Text(_car),
-        onChanged: (value) {
-          setState(() {
-            _car = value;
-            print(_car);
-          });
-        },
-        items: cars.map((car) {
-          return DropdownMenuItem(
-            value: car,
-            child: Text(car),
-          );
-        }).toList(),
+      //color: Colors.black,
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: DropdownButton(
+            isDense: true,
+            icon: Icon(Icons.directions_car),
+            underline: Text(''),
+            hint: Text(_car),
+            onChanged: (value) {
+              setState(() {
+                _car = value;
+                print(_car);
+              });
+            },
+            items: cars.map((car) {
+              return DropdownMenuItem(
+                value: car,
+                child: Text(car),
+              );
+            }).toList(),
+          ),
+        ),
       ),
     );
   }
