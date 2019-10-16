@@ -179,6 +179,7 @@ class _MapState extends State<Map> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 5.0),
                     child: FloatingActionButton(
+                      heroTag: 'map',
                       onPressed: () => _onMapTypeButtonPressed(),
                       materialTapTargetSize: MaterialTapTargetSize.padded,
                       backgroundColor: prefix0.primaryColor,
@@ -191,6 +192,7 @@ class _MapState extends State<Map> {
                     child: Container(
                       height: 35.00,
                       child: FloatingActionButton(
+                        heroTag: 'zoom_in',
                         onPressed: () => zoomIn(),
                         materialTapTargetSize: MaterialTapTargetSize.padded,
                         backgroundColor: prefix0.primaryColor,
@@ -204,6 +206,7 @@ class _MapState extends State<Map> {
                     child: Container(
                       height: 35.00,
                       child: FloatingActionButton(
+                        heroTag: 'zoomOut',
                         onPressed: () => zoomOut(),
                         materialTapTargetSize: MaterialTapTargetSize.padded,
                         backgroundColor: prefix0.primaryColor,
@@ -217,6 +220,7 @@ class _MapState extends State<Map> {
                     child: Container(
                       height: 35.00,
                       child: FloatingActionButton(
+                        heroTag: 'union',
                         onPressed: () => joinUnjoin(),
                         materialTapTargetSize: MaterialTapTargetSize.padded,
                         backgroundColor: prefix0.primaryColor,

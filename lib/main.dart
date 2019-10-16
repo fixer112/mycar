@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mycar/Auth/otp.dart';
 import 'package:mycar/Global/variables.dart' as prefix0;
 import 'package:mycar/Homepage/homepage.dart';
+import 'package:mycar/Profile.dart';
 import 'Auth/login.dart';
 
 void main() => runApp(MyApp());
@@ -36,9 +37,9 @@ class MyApp extends StatelessWidget {
             ),
             buttonColor: prefix0.primaryColor,
             indicatorColor: prefix0.primaryColor,
-            iconTheme: IconThemeData(color: prefix0.primaryColor),
-            primaryIconTheme: IconThemeData(color: prefix0.primaryColor),
-            accentIconTheme: IconThemeData(color: prefix0.primaryColor),
+            iconTheme: IconThemeData(color: Colors.white),
+            primaryIconTheme: IconThemeData(color: Colors.white),
+            accentIconTheme: IconThemeData(color: Colors.white),
             disabledColor: prefix0.disabledColor,
 
             //buttonTheme: ButtonThemeData(buttonColor: prefix0.primaryColor),
@@ -62,11 +63,16 @@ class MyApp extends StatelessWidget {
                 ))
             //color
             ),
-        initialRoute: '/login',
+        initialRoute: '/homepage',
         routes: {
           '/login': (context) => Login(),
           '/otp': (context) => OTP(),
           '/homepage': (context) => Homepage(),
+          '/profile': (context) => Profile(),
+          '/cars': (context) => Homepage(),
+          '/about': (context) => Homepage(),
+          '/payment': (context) => Homepage(),
+          '/support': (context) => Homepage(),
         }
         //home: Login(), //MyHomePage(title: 'Flutter Demo Home Page'),
         );

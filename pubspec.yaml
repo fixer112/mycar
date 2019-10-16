@@ -27,10 +27,20 @@ dependencies:
   google_maps_flutter: ^0.5.21+3
   #datetime_picker_formfield: ^0.1.1
   location: ^2.3.5
+  #loading: ^1.0.1
+  flutter_spinkit: ^3.1.0
+  keyboard_visibility: any
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.7.3
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/logo.jpeg
 
 
 # For information on the generic Dart part of this file, see the
@@ -45,9 +55,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/logo.jpeg
+    - assets/images/avatar.jpeg
+    - assets/images/abu.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
